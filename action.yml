@@ -1,0 +1,18 @@
+name: Setup Tangram
+description: Download and configure Tangram in your path, and optionally cache artifacts
+author: Tangram <hello@tangramdev>
+branding:
+  icon: play-circle
+  color: blue
+inputs:
+  tangram-rev:
+    description: The git rev to use for Tangram.
+    required: false
+outputs:
+  tangram-rev:
+    description: The git rev of tangram that was installed.
+runs:
+  using: "node20"
+  main: "dist/setup/index.js"
+  post: "dist/cache-save/index.js"
+  post-if: success()

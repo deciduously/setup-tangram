@@ -1,0 +1,26 @@
+{
+  "private": true,
+  "name": "setup-tangram",
+  "version": "1.0.0",
+  "description": "Setup Tangram on Github Actions",
+  "license": "MIT",
+  "homepage": "https://tangram.dev",
+  "repository": "git@github.com:tangramdotdev/setup-tangram.git",
+  "main": "dist/index.js",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "@actions/core": "^1.11.1",
+    "@biomejs/biome": "^1.9.3"
+  },
+  "scripts": {
+    "build": "bun build ./src/index.ts --minify --target node --outfile=dist/index.js",
+    "check": "bun run --filter \"*\" check",
+    "format": "bun run --filter \"*\" format",
+    "start": "bun run build && bun dist/index.js"
+  }
+}

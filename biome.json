@@ -1,0 +1,29 @@
+{
+	"$schema": "https://biomejs.dev/schemas/1.6.3/schema.json",
+	"json": {
+		"formatter": {
+			"indentStyle": "tab"
+		}
+	},
+	"linter": {
+		"rules": {
+			"complexity": {
+				"noBannedTypes": "off"
+			},
+			"correctness": {
+				"noUnnecessaryContinue": "off"
+			},
+			"style": {
+				"noNonNullAssertion": "off",
+				"noParameterAssign": "off",
+				"noUselessElse": "off",
+				"useConst": "off"
+			},
+			"suspicious": {
+				"noExplicitAny": "off",
+				"noRedeclare": "off",
+				"useIsArray": "off"
+			}
+		}
+	}
+}
